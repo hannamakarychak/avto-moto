@@ -2,6 +2,7 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import "@reach/tabs/styles.css";
 
 import Container from "../container/container";
+import Description from "../description/description";
 import "./tabs.scss";
 
 const Details = () => {
@@ -16,7 +17,9 @@ const Details = () => {
           </TabList>
 
           <TabPanels>
-            <TabPanel></TabPanel>
+            <TabPanel>
+              <Description />
+            </TabPanel>
             <TabPanel>
               <p>two!</p>
             </TabPanel>

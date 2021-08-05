@@ -1,0 +1,12 @@
+.table {
+  width: 56.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Open Sans";
+  line-height: 22px;
+  padding: 20px 0 8px 0;
+  color: var(--main-color-dark);
+
+  border-bottom: 1px solid var(--border-color);
+}
