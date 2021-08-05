@@ -58,8 +58,10 @@ const Hero = () => {
               <path d="M1 12.5L124 1" stroke="#A3A4A6" />
             </svg>
           </div>
-          <Button className="hero__button button--accent">оставить заявку</Button>
-          <Button className="hero__button button--ghost">В КРЕДИТ ОТ 11 000 ₽</Button>
+          <Button className="hero__button">оставить заявку</Button>
+          <Button className="hero__button" ghost>
+            В КРЕДИТ ОТ 11 000 ₽
+          </Button>
         </div>
       </Container>
     </section>

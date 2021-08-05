@@ -9,6 +9,7 @@
   --main-color-dark-opaque: rgba(72, 73, 77, 0.5);
   --bright-accent: #d12136;
   --border-color: #d7d9df;
+  --color-dark: #000000;
 }
 
 html {

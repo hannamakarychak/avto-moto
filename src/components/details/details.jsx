@@ -1,9 +1,12 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import "@reach/tabs/styles.css";
+import Button from "../button/button";
 
 import Container from "../container/container";
-import Description from "../description/description";
-import "./tabs.scss";
+import Review from "../review/review";
+import Description from "../table/table";
+import "./details.scss";
+import "./tabs.scss"; //TODO: extract tabs
 
 const Details = () => {
   return (
@@ -11,7 +14,7 @@ const Details = () => {
       <Container className="details__container">
         <Tabs className="tabs">
           <TabList className="tabs__list">
-            <Tab className="tabs__button tabs__button--accent">Характеристики</Tab>
+            <Tab className="tabs__button">Характеристики</Tab>
             <Tab className="tabs__button">Отзывы</Tab>
             <Tab className="tabs__button">Контакты</Tab>
           </TabList>
@@ -20,26 +23,18 @@ const Details = () => {
             <TabPanel>
               <Description />
             </TabPanel>
-            <TabPanel>
-              <p>two!</p>
+            <TabPanel className="details__reviews">
+              <Button className="details__add-review" ghost>
+                оставить отзыв
+              </Button>
+              <Review />
+              <Review />
             </TabPanel>
             <TabPanel>
               <p>three!</p>
             </TabPanel>
           </TabPanels>
         </Tabs>
-
-        <div className="details__name">Борис Иванов</div>
-        <svg width="8" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M3.618 4.364H.703V3.06h2.915V.072h1.319V3.06h2.922v1.304H4.937v2.973H3.618V4.364z"
-            fill="#D12136"
-          />
-        </svg>
-        <div className="details__row">
-          <div className="details__heading">Достоинства</div>
-          <div className="details__text">мощность, внешний вид</div>
-        </div>
       </Container>
     </section>
   );
