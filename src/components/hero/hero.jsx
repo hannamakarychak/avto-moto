@@ -1,5 +1,6 @@
 import Button from "../button/button";
 import Container from "../container/container";
+import Gallery from "../gallery/gallery";
 import GasIcon from "../gas-icon/gas-icon";
 import HorseIcon from "../horse-icon/horse-icon";
 import TransmitionIcon from "../transmition-icon/transmition-icon";
@@ -11,48 +12,15 @@ const Hero = () => {
   return (
     <section className="hero">
       <Container className="hero__slider-container">
-        <div className="hero__slider">
-          <div className="hero__main-image-wrapper">
-            img will be here
-            <img className="hero__main-image" alt="Марпех 11"></img>
-          </div>
-          <div className="hero__other">
-            <button className="hero__button-arrow">
-              <svg width="52" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="26" cy="26" r="25.5" fill="#fff" stroke="#D7D9DF" />
-                <path
-                  d="M17.004 26.172l5.914-5.803m-5.914 5.803l5.689 5.797m-5.689-5.797l18.977.18"
-                  stroke="#D7D9DF"
-                />
-              </svg>
-            </button>
-            <div className="hero__other-image-wrapper">
-              img will be here
-              <img className="hero__other-image" alt="Марпех 11"></img>
-            </div>
-            <div className="hero__other-image-wrapper">
-              img will be here
-              <img className="hero__other-image" alt="Марпех 11 салон"></img>
-            </div>
-            <div className="hero__other-image-wrapper">
-              img will be here
-              <img className="hero__other-image" alt="Марпех 11 салон"></img>
-            </div>
-            <button className="hero__button-arrow">
-              <svg width="52" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M.5 26c0 14.083 11.414 25.5 25.494 25.5S51.487 40.083 51.487 26 40.073.5 25.994.5C11.914.5.5 11.917.5 26z"
-                  fill="#fff"
-                  stroke="#D7D9DF"
-                />
-                <path
-                  d="M34.987 26.172l-5.912-5.803m5.912 5.803L29.3 31.969m5.687-5.797l-18.972.18"
-                  stroke="#48494D"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+        <Gallery
+          images={["img/car1.png", "img/car2.png", "img/car3.png"]}
+          thumbnails={[
+            "img/car-thumbnail1.png",
+            "img/car-thumbnail2.png",
+            "img/car-thumbnail3.png",
+          ]}
+        />
+
         <div className="hero__info">
           <h2 className="hero__heading">Марпех 11</h2>
           <div className="hero__specs">

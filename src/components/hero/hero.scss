@@ -7,55 +7,19 @@
   display: flex;
 }
 
-.hero__main-image-wrapper {
-  width: 60rem;
-  height: 375px;
-  margin: 0 5.4rem 3.9rem 0;
-  background-color: aqua;
-}
-
-.hero__main-image {
-  display: block;
-  width: 100%;
-}
-
-.hero__other-image-wrapper {
-  width: 128px;
-  height: 80px;
-  background-color: aquamarine;
-}
-
-.hero__other-image {
-  display: block;
-  width: 100%;
-}
-
-.hero__other-image-wrapper:not(:last-child) {
-  margin-right: 2.5rem;
-}
-
-.hero__other-image-wrapper:last-child {
-  margin-right: 3.1rem;
-}
-
-.hero__other {
-  display: flex;
-  max-width: 60rem;
-}
-
 .hero__button:first-child {
   margin-right: 3.1rem;
 }
 
 .hero__heading {
-  // font-family: Open Sans;
-
+  font-family: "Open Sans";
   font-weight: bold;
   font-size: 30px;
   line-height: 41px;
   margin: 0;
   color: var(--main-color-dark);
 }
+
 .hero__specs {
   display: flex;
   justify-content: flex-start;
