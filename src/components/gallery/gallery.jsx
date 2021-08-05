@@ -6,49 +6,37 @@ const Gallery = ({ images, thumbnails }) => {
   const [currentImage, setCurrentImage] = useState(0);
   console.log(currentImage);
 
-  const setNextImage = (currentImage) => {
-    if (currentImage <= 2) {
-      setCurrentImage(currentImage + 1);
-    }
+  const setNextImage = () => {
+    setCurrentImage(currentImage + 1);
   };
 
-  const setPrevImage = (currentImage) => {
-    if (currentImage >= 1) {
-      setCurrentImage(currentImage - 1);
-    }
+  const setPrevImage = () => {
+    setCurrentImage(currentImage - 1);
   };
 
   return (
     <div className="gallery__slider">
-      <div className="gallery__main-image-wrapper">
-        <img
-          className="gallery__main-image"
-          alt={`Марпех ${currentImage}`}
-          src={images[currentImage]}
-        ></img>
-      </div>
-      <div className="gallery__other">
+      <img
+        className="gallery__main-image"
+        alt={images[currentImage].alt}
+        src={images[currentImage].src}
+      />
+      <div className="gallery__thumbnails">
         <ArrowButton
-          onClick={() => setPrevImage(currentImage)}
+          onClick={setPrevImage}
           currentImage={currentImage}
-          disabled={currentImage === 0 ? true : false}
+          disabled={currentImage === 0}
           direction="left"
-        ></ArrowButton>
-        <div className="gallery__other-image-wrapper">
-          <img className="gallery__other-image" alt="Марпех 11" src={thumbnails[0]}></img>
-        </div>
-        <div className="gallery__other-image-wrapper">
-          <img className="gallery__other-image" alt="Марпех 11 салон" src={thumbnails[1]}></img>
-        </div>
-        <div className="gallery__other-image-wrapper">
-          <img className="gallery__other-image" alt="Марпех 11 салон" src={thumbnails[2]}></img>
-        </div>
+        />
+        {thumbnails.map((el) => (
+          <img key={el} className="gallery__thumbnail" alt={images[currentImage].alt} src={el} />
+        ))}
         <ArrowButton
-          onClick={() => setNextImage(currentImage)}
+          onClick={setNextImage}
           currentImage={currentImage}
-          disabled={currentImage === 2 ? true : false}
+          disabled={currentImage === images.length - 1}
           direction="right"
-        ></ArrowButton>
+        />
       </div>
     </div>
   );

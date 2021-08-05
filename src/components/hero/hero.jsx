@@ -13,7 +13,11 @@ const Hero = () => {
     <section className="hero">
       <Container className="hero__slider-container">
         <Gallery
-          images={["img/car1.png", "img/car2.png", "img/car3.png"]}
+          images={[
+            { src: "img/car1.png", alt: "Морпех 11 экстерьер" },
+            { src: "img/car-thumbnail2.png", alt: "Морпех 11 салон" },
+            { src: "img/car-thumbnail3.png", alt: "Морпех 11 приборы" },
+          ]}
           thumbnails={[
             "img/car-thumbnail1.png",
             "img/car-thumbnail2.png",
