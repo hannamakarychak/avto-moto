@@ -1,10 +1,16 @@
-
-import './App.css';
-import Header from './components/header/header';
+import { Fragment } from "react";
+import "./App.css";
+import Details from "./components/details/details";
+import Header from "./components/header/header";
+import Hero from "./components/hero/hero";
 
 function App() {
   return (
-    <Header/>
+    <Fragment>
+      <Header />
+      <Hero />
+      <Details />
+    </Fragment>
   );
 }
 

@@ -1,0 +1,25 @@
+.button {
+  display: block;
+  background-color: none;
+  border: none;
+
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 16.5px 20px;
+
+  &--accent {
+    color: var(--bg-color-light);
+    background-color: var(--bright-accent);
+  }
+
+  &--ghost {
+    background-color: var(--bg-color-light);
+    color: var(--bright-accent);
+    border: 1px solid var(--bright-accent);
+  }
+}

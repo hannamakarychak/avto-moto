@@ -4,22 +4,30 @@
 
 :root {
   --bg-color-accent: #f5f5f9;
+  --bg-color-light: #ffffff;
   --main-color-dark: #48494d;
+  --main-color-dark-opaque: rgba(72, 73, 77, 0.5);
+  --bright-accent: #d12136;
+  --border-color: #d7d9df;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
 }
 
-/* @font-face {
+@font-face {
   font-family: "Open Sans";
-  src: url("fonts/OpenSans-Bold.woff2") format("woff2"),
-    url("fonts/OpenSans-Bold.woff") format("woff");
-  font-weight: bold;
+  src: url("fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -28,7 +36,7 @@ body {
   font-family: "Open Sans";
   src: url("fonts/OpenSans-Regular.woff2") format("woff2"),
     url("fonts/OpenSans-Regular.woff") format("woff");
-  font-weight: bold;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -37,10 +45,10 @@ body {
   font-family: "Open Sans";
   src: url("fonts/OpenSans-SemiBold.woff2") format("woff2"),
     url("fonts/OpenSans-SemiBold.woff") format("woff");
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
-} */
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
