@@ -1,33 +1,23 @@
 import { DialogOverlay, DialogContent } from "@reach/dialog";
 import "@reach/dialog/styles.css";
 import VisuallyHidden from "@reach/visually-hidden";
-import { useState } from "react";
-import Button from "../button/button";
+import Form from "../form/form";
 
-const Modal = () => {
-  const [showDialog, setShowDialog] = useState(false);
-  const open = () => setShowDialog(true);
-  const close = () => setShowDialog(false);
-
+const Modal = ({ isOpen, onClose }) => {
   return (
-    <div>
-      <Button className="details__add-review" ghost onClick={open}>
-        оставить отзыв
-      </Button>
-      <DialogOverlay
-        style={{ background: "rgb(0.5 229,229,229)" }}
-        isOpen={showDialog}
-        onDismiss={close}
-      >
-        <DialogContent isOpen={showDialog} aria-label="Review Form">
-          <button className="close-button" onClick={close}>
-            <VisuallyHidden>Close</VisuallyHidden>
-            <span aria-hidden>×</span>
-          </button>
-          <p>Hello there. I am a dialog</p>
-        </DialogContent>
-      </DialogOverlay>
-    </div>
+    <DialogOverlay
+      style={{ background: "rgb(0.5 229,229,229)" }}
+      isOpen={isOpen}
+      onDismiss={onClose}
+    >
+      <DialogContent isOpen={isOpen} aria-label="Review Form">
+        <button className="close-button" onClick={onClose}>
+          <VisuallyHidden>Close</VisuallyHidden>
+          <span aria-hidden>×</span>
+        </button>
+        <Form />
+      </DialogContent>
+    </DialogOverlay>
   );
 };
 

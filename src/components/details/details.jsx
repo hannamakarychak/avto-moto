@@ -1,5 +1,6 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import "@reach/tabs/styles.css";
+import { useState } from "react";
 import Button from "../button/button";
 import Contacts from "../contacts/contacts";
 
@@ -12,6 +13,10 @@ import "./details.scss";
 import "./tabs.scss"; //TODO: extract tabs
 
 const Details = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
   return (
     <section className="details">
       <Container className="details__container">
@@ -27,12 +32,12 @@ const Details = () => {
               <Description />
             </TabPanel>
             <TabPanel className="details__reviews">
-              <Button className="details__add-review" ghost>
+              <Button className="details__add-review" ghost onClick={handleOpenModal}>
                 оставить отзыв
               </Button>
               <Review name={"hep"} pros={"good"} cons={"bad"} comment={"bla lba"} date={"minutr"} />
               <Review />
-              <Modal />
+              <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
             </TabPanel>
             <TabPanel>
               <Contacts />
