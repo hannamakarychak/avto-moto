@@ -4,27 +4,23 @@ import "./review.scss";
 
 const rating = 3;
 
-const Review = () => {
+const Review = ({ name, pros, cons, comment, date }) => {
   return (
     <Fragment>
       <div className="review__item">
-        <div className="review__name">Борис Иванов</div>
+        <div className="review__name">{name}</div>
         <div className="review__row">
           <span className="review__icon">+</span>
           <div className="review__heading">Достоинства</div>
-          <div className="review__text">мощность, внешний вид</div>
+          <div className="review__text">{pros}</div>
         </div>
         <div className="review__row">
           <span className="review__icon">-</span>
           <div className="review__heading">Недостатки</div>
-          <div className="review__text">Слабые тормозные колодки (пришлось заменить)</div>
+          <div className="review__text">{cons}</div>
         </div>
         <div className="review__heading review__heading--comment">Комментарий</div>
-        <div className="review__text review__text--comment">
-          Взяли по трейд-ин, на выгодных условиях у дилера. Стильная внешка и крут по базовым
-          характеристикам. Не думал, что пересяду на китайский автопром, но сейчас гоняю и понимаю,
-          что полностью доволен.
-        </div>
+        <div className="review__text review__text--comment">{comment}</div>
 
         <div className="review__row">
           {[1, 2, 3, 4, 5].map((el) => (
@@ -38,7 +34,7 @@ const Review = () => {
           <span className="review__recommend">Советует</span>
         </div>
         <div className="review__row">
-          <span className="review__time">1 минуту назад</span>
+          <span className="review__time">{date}</span>
           <button className="review__reply">Ответить</button>
         </div>
       </div>

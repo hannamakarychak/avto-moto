@@ -5,6 +5,7 @@ import Contacts from "../contacts/contacts";
 
 import Container from "../container/container";
 import Map from "../map/map";
+import Modal from "../modal/modal";
 import Review from "../review/review";
 import Description from "../table/table";
 import "./details.scss";
@@ -29,8 +30,9 @@ const Details = () => {
               <Button className="details__add-review" ghost>
                 оставить отзыв
               </Button>
+              <Review name={"hep"} pros={"good"} cons={"bad"} comment={"bla lba"} date={"minutr"} />
               <Review />
-              <Review />
+              <Modal />
             </TabPanel>
             <TabPanel>
               <Contacts />
