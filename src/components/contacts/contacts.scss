@@ -1,0 +1,27 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-bottom: 98px;
+}
+
+.contacts__heading {
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 12px;
+  color: var(--deep-dark);
+}
+
+.contacts__text {
+  max-width: 27.4rem;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 26px;
+  margin-right: 74px;
+  color: var(--color-dark);
+}
+
+.contacts__map {
+  flex: 0 1 47.1rem;
+}

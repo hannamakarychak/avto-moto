@@ -6,6 +6,7 @@ const GasIcon = ({ className }) => {
       height="40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      opacity=".5"
     >
       <rect
         x="1.746"

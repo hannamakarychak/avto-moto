@@ -1,8 +1,10 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import "@reach/tabs/styles.css";
 import Button from "../button/button";
+import Contacts from "../contacts/contacts";
 
 import Container from "../container/container";
+import Map from "../map/map";
 import Review from "../review/review";
 import Description from "../table/table";
 import "./details.scss";
@@ -31,7 +33,7 @@ const Details = () => {
               <Review />
             </TabPanel>
             <TabPanel>
-              <p>three!</p>
+              <Contacts />
             </TabPanel>
           </TabPanels>
         </Tabs>
