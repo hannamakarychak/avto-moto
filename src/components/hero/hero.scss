@@ -3,8 +3,17 @@
   background-color: var(--bg-color-light);
 }
 
-.hero__slider-container {
+.hero__container {
   display: flex;
+}
+
+.hero__gallery {
+  flex: 1 1 auto;
+  max-width: 65.4rem;
+}
+
+.hero__info {
+  flex: 1 1 auto;
 }
 
 .hero__button:first-child {
@@ -65,6 +74,11 @@
   line-height: 27px;
   font-weight: normal;
   color: var(--main-color-dark-opaque);
+  background-image: url("./line-through.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 50%;
+  white-space: nowrap;
 }
 
 .hero__line-through {

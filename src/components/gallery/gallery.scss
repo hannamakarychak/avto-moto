@@ -1,19 +1,23 @@
+.gallery {
+  padding-right: 5.4rem;
+}
+
 .gallery__main-image {
-  max-width: 60rem;
-  height: 375px;
-  margin: 0 5.4rem 3.9rem 0;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
 .gallery__thumbnails {
   display: flex;
   align-items: center;
-  max-width: 60rem;
   justify-content: space-between;
+  margin-top: 3.9rem;
 }
 
 .gallery__thumbnail {
   display: block;
   width: 128px;
   height: 80px;
+  margin: 0 2px;
 }

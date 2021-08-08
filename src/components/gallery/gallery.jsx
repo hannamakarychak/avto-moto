@@ -1,8 +1,9 @@
+import classNames from "classnames";
 import { useState } from "react";
 import ArrowButton from "../arrow-button/arrow-button";
 import "./gallery.scss";
 
-const Gallery = ({ images, thumbnails }) => {
+const Gallery = ({ images, thumbnails, className = "" }) => {
   const [currentImage, setCurrentImage] = useState(0);
   console.log(currentImage);
 
@@ -15,7 +16,7 @@ const Gallery = ({ images, thumbnails }) => {
   };
 
   return (
-    <div className="gallery__slider">
+    <div className={classNames("gallery", className)}>
       <img
         className="gallery__main-image"
         alt={images[currentImage].alt}

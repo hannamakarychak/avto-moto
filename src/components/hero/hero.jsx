@@ -11,8 +11,9 @@ import "./hero.scss";
 const Hero = () => {
   return (
     <section className="hero">
-      <Container className="hero__slider-container">
+      <Container className="hero__container">
         <Gallery
+          className="hero__gallery"
           images={[
             { src: "img/car1.png", alt: "Морпех 11 экстерьер" },
             { src: "img/car-thumbnail2.png", alt: "Морпех 11 салон" },
@@ -48,15 +49,6 @@ const Hero = () => {
           <div className="hero__price">
             <span className="hero__current-price">2 300 000 ₽</span>
             <span className="hero__old-price">2 400 000 ₽</span>
-            <svg
-              className="hero__line-through"
-              width="125"
-              height="13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M1 12.5L124 1" stroke="#A3A4A6" />
-            </svg>
           </div>
           <Button className="hero__button">оставить заявку</Button>
           <Button className="hero__button" ghost>
