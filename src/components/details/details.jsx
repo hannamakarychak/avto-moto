@@ -8,7 +8,7 @@ import "./details.scss";
 
 const Details = () => {
   return (
-    <section>
+    <section className="details">
       <Container>
         <Tabs className="tabs">
           <TabList className="tabs__list">

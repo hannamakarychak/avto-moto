@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import "./App.css";
 import Details from "./components/details/details";
+import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Hero from "./components/hero/hero";
 
@@ -10,6 +10,7 @@ function App() {
       <Header />
       <Hero />
       <Details />
+      <Footer />
     </Fragment>
   );
 }
