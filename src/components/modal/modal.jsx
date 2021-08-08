@@ -8,11 +8,7 @@ import "./modal.scss";
 const Modal = ({ isOpen, onClose }) => {
   return (
     <div>
-      <DialogOverlay
-        style={{ background: "rgb(0.5 229,229,229)" }}
-        isOpen={isOpen}
-        onDismiss={onClose}
-      >
+      <DialogOverlay isOpen={isOpen} onDismiss={onClose} className="modal-overlay">
         <DialogContent aria-label="Review Form" className="modal">
           <button className="modal__close-button" onClick={onClose}>
             <VisuallyHidden>Close</VisuallyHidden>
@@ -22,7 +18,6 @@ const Modal = ({ isOpen, onClose }) => {
                 fill="#9F9E9E"
               />
             </svg>
-            {/* <span aria-hidden>×</span> */}
           </button>
           <h3 className="modal__title">Оставить отзыв </h3>
           <Form onSubmit={onClose} />

@@ -1,0 +1,11 @@
+.reviews-list {
+  position: relative;
+  margin-top: 30px;
+}
+
+.reviews-list__add-review {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}

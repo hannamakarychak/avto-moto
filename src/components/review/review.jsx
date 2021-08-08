@@ -2,9 +2,7 @@ import { Fragment } from "react";
 
 import "./review.scss";
 
-const rating = 3;
-
-const Review = ({ name, pros, cons, comment, date }) => {
+const Review = ({ name, pros, cons, comment, date, rating }) => {
   return (
     <Fragment>
       <div className="review__item">

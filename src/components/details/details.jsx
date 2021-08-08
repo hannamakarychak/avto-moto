@@ -1,25 +1,15 @@
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import "@reach/tabs/styles.css";
-import { useState } from "react";
-import Button from "../button/button";
 import Contacts from "../contacts/contacts";
 import Container from "../container/container";
-import Modal from "../modal/modal";
-import Review from "../review/review";
+import ReviewsList from "../reviews-list/reviews-list";
 import Description from "../table/table";
 import "./details.scss";
 
 const Details = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = (newReview) => {
-    console.log("FORM DATA: ", newReview);
-    setIsModalOpen(false);
-  };
-
   return (
-    <section className="details">
-      <Container className="details__container">
+    <section>
+      <Container>
         <Tabs className="tabs">
           <TabList className="tabs__list">
             <Tab className="tabs__button">Характеристики</Tab>
@@ -31,13 +21,8 @@ const Details = () => {
             <TabPanel>
               <Description />
             </TabPanel>
-            <TabPanel className="details__reviews">
-              <Button className="details__add-review" ghost onClick={handleOpenModal}>
-                оставить отзыв
-              </Button>
-              <Review name={"hep"} pros={"good"} cons={"bad"} comment={"bla lba"} date={"minutr"} />
-              <Review />
-              <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
+            <TabPanel>
+              <ReviewsList />
             </TabPanel>
             <TabPanel>
               <Contacts />
