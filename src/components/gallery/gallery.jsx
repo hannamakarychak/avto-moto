@@ -3,7 +3,7 @@ import { useState } from "react";
 import ArrowButton from "../arrow-button/arrow-button";
 import "./gallery.scss";
 
-const Gallery = ({ images, thumbnails, className = "" }) => {
+const Gallery = ({ images, thumbnails, className = "", promoLabel }) => {
   const [currentImage, setCurrentImage] = useState(0);
   console.log(currentImage);
 
@@ -17,6 +17,7 @@ const Gallery = ({ images, thumbnails, className = "" }) => {
 
   return (
     <div className={classNames("gallery", className)}>
+      <span className="gallery__promo">{promoLabel}</span>
       <img
         className="gallery__main-image"
         alt={images[currentImage].alt}

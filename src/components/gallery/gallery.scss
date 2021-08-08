@@ -1,4 +1,5 @@
 .gallery {
+  position: relative;
   padding-right: 5.4rem;
 }
 
@@ -20,4 +21,18 @@
   width: 128px;
   height: 80px;
   margin: 0 2px;
+}
+
+.gallery__promo {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.07em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-transform: uppercase;
+  padding: 8px 27px;
+  background-color: var(--bright-accent);
+  color: var(--bg-color-light);
 }

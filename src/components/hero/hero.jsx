@@ -24,6 +24,7 @@ const Hero = () => {
             "img/car-thumbnail2.png",
             "img/car-thumbnail3.png",
           ]}
+          promoLabel="new model"
         />
 
         <div className="hero__info">
