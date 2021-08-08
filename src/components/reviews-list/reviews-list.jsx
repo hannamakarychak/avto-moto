@@ -14,7 +14,7 @@ const ReviewsList = () => {
 
   useEffect(() => {
     const initialReviews = localStorage.getItem(REVIEWS_STORAGE_KEY);
-    setReviews(JSON.parse(initialReviews));
+    setReviews(JSON.parse(initialReviews) || []);
   }, []);
 
   const handleCloseModal = (newReview) => {
