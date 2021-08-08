@@ -1,4 +1,6 @@
 import { Fragment } from "react";
+import { formatDistance } from "date-fns";
+import { ru } from "date-fns/locale";
 
 import "./review.scss";
 
@@ -40,7 +42,9 @@ const Review = ({ name, pros, cons, comment, date, rating }) => {
           <span className="review__recommend">Советует</span>
         </div>
         <div className="review__row">
-          <span className="review__time">{date}</span>
+          <span className="review__time">
+            {formatDistance(date, new Date(), { locale: ru, addSuffix: true })}
+          </span>
           <button className="review__reply">Ответить</button>
         </div>
       </div>

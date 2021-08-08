@@ -51,7 +51,7 @@ const Form = ({ onSubmit }) => {
   };
 
   const handleCommentInputChange = (evt) => {
-    setHasNameInputError(false);
+    setHasCommentInputError(false);
     setCommentInput(evt.target.value);
   };
 
