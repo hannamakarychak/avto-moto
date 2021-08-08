@@ -35,6 +35,10 @@ const Form = ({ onSubmit }) => {
     onSubmit({
       name: nameInput,
       rating,
+      pros: prosInput,
+      cons: consInput,
+      comment: commentInput,
+      date: Date.now(),
     });
   };
 
@@ -50,8 +54,6 @@ const Form = ({ onSubmit }) => {
     setHasNameInputError(false);
     setCommentInput(evt.target.value);
   };
-
-  console.log(commentInput);
 
   return (
     <form className="form">

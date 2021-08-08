@@ -8,8 +8,13 @@ import "./reviews-list.scss";
 const ReviewsList = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleOpenModal = () => setIsModalOpen(true);
+  const [reviews, setReviews] = useState([]);
+
   const handleCloseModal = (newReview) => {
-    console.log("FORM DATA: ", newReview);
+    const newReviews = reviews.slice();
+    newReviews.push(newReview);
+
+    setReviews(newReviews);
     setIsModalOpen(false);
   };
 
@@ -18,8 +23,18 @@ const ReviewsList = () => {
       <Button className="reviews-list__add-review" ghost onClick={handleOpenModal}>
         оставить отзыв
       </Button>
-      <Review name={"hep"} pros={"good"} cons={"bad"} comment={"bla lba"} date={"minutr"} />
-      <Review />
+
+      {reviews.map((review) => (
+        <Review
+          name={review.name}
+          pros={review.pros}
+          cons={review.cons}
+          comment={review.comment}
+          date={review.date}
+          rating={review.rating}
+          key={review.date}
+        />
+      ))}
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
