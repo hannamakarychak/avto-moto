@@ -3,19 +3,19 @@ import "@reach/tabs/styles.css";
 import { useState } from "react";
 import Button from "../button/button";
 import Contacts from "../contacts/contacts";
-
 import Container from "../container/container";
-import Map from "../map/map";
 import Modal from "../modal/modal";
 import Review from "../review/review";
 import Description from "../table/table";
 import "./details.scss";
-import "./tabs.scss"; //TODO: extract tabs
 
 const Details = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
+  const handleCloseModal = (newReview) => {
+    console.log("FORM DATA: ", newReview);
+    setIsModalOpen(false);
+  };
 
   return (
     <section className="details">

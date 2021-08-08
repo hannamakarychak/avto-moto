@@ -3,21 +3,32 @@ import "@reach/dialog/styles.css";
 import VisuallyHidden from "@reach/visually-hidden";
 import Form from "../form/form";
 
+import "./modal.scss";
+
 const Modal = ({ isOpen, onClose }) => {
   return (
-    <DialogOverlay
-      style={{ background: "rgb(0.5 229,229,229)" }}
-      isOpen={isOpen}
-      onDismiss={onClose}
-    >
-      <DialogContent isOpen={isOpen} aria-label="Review Form">
-        <button className="close-button" onClick={onClose}>
-          <VisuallyHidden>Close</VisuallyHidden>
-          <span aria-hidden>×</span>
-        </button>
-        <Form />
-      </DialogContent>
-    </DialogOverlay>
+    <div>
+      <DialogOverlay
+        style={{ background: "rgb(0.5 229,229,229)" }}
+        isOpen={isOpen}
+        onDismiss={onClose}
+      >
+        <DialogContent aria-label="Review Form" className="modal">
+          <button className="modal__close-button" onClick={onClose}>
+            <VisuallyHidden>Close</VisuallyHidden>
+            <svg width="15" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.64 15.01L7.505 8.865 1.37 15.01 0 13.64l6.145-6.135L0 1.37 1.37 0l6.135 6.145L13.64.01 15 1.37 8.865 7.505 15 13.64l-1.36 1.37z"
+                fill="#9F9E9E"
+              />
+            </svg>
+            {/* <span aria-hidden>×</span> */}
+          </button>
+          <h3 className="modal__title">Оставить отзыв </h3>
+          <Form onSubmit={onClose} />
+        </DialogContent>
+      </DialogOverlay>
+    </div>
   );
 };
 

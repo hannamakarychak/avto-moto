@@ -1,31 +1,111 @@
-const Form = () => {
+import classNames from "classnames";
+import { useState } from "react";
+import Button from "../button/button";
+import StarRating from "../star-rating/star-rating";
+import "./form.scss";
+
+const Form = ({ onSubmit }) => {
+  const [nameInput, setNameInput] = useState("");
+  const [hasNameInputError, setHasNameInputError] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [prosInput, setProsInput] = useState("");
+  const [consInput, setConsInput] = useState("");
+  const [commentInput, setCommentInput] = useState("");
+  const [hasCommentInputError, setHasCommentInputError] = useState(false);
+
+  const handleNameInputChange = (evt) => {
+    setHasNameInputError(false);
+    setNameInput(evt.target.value);
+  };
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+
+    if (nameInput === "") {
+      setHasNameInputError(true);
+    }
+    if (commentInput === "") {
+      setHasCommentInputError(true);
+    }
+
+    if (nameInput === "" || commentInput === "") {
+      return;
+    }
+
+    onSubmit({
+      name: nameInput,
+      rating,
+    });
+  };
+
+  const handleProsInputChange = (evt) => {
+    setProsInput(evt.target.value);
+  };
+
+  const handleConsInputChange = (evt) => {
+    setConsInput(evt.target.value);
+  };
+
+  const handleCommentInputChange = (evt) => {
+    setHasNameInputError(false);
+    setCommentInput(evt.target.value);
+  };
+
+  console.log(commentInput);
+
   return (
     <form className="form">
-      <div>
-        <input type="text" name="name" className="input" placeholder="Имя" required />
-        <input type="text" name="cons" className="input" placeholder="Достоинства" />
-        <input type="text" name="name" className="input" placeholder="Недостатки" />
+      <div className="form__main">
+        <div className="form__col">
+          {hasNameInputError && <p className="form__error-message">Пожалуйста, заполните поле</p>}
+          <input
+            type="text"
+            name="name"
+            className={classNames("form__input form__input--required", {
+              "form__input--error": hasNameInputError,
+            })}
+            placeholder="Имя"
+            required
+            value={nameInput}
+            onChange={handleNameInputChange}
+          />
+          <input
+            type="text"
+            name="cons"
+            className="form__input"
+            placeholder="Достоинства"
+            value={prosInput}
+            onChange={handleProsInputChange}
+          />
+          <input
+            type="text"
+            name="name"
+            className="form__input"
+            placeholder="Недостатки"
+            value={consInput}
+            onChange={handleConsInputChange}
+          />
+        </div>
+        <div className="form__col">
+          <StarRating onChange={setRating} className="form__star-rating" />
+          {hasCommentInputError && (
+            <p className="form__error-message">Пожалуйста, заполните поле</p>
+          )}
+          <textarea
+            className={classNames("form__input form__input--required", {
+              "form__input--error": hasCommentInputError,
+            })}
+            rows="5"
+            required
+            placeholder="Комментарий"
+            value={commentInput}
+            onChange={handleCommentInputChange}
+          />
+        </div>
       </div>
-      <div>
-        <label>
-          Оцените товар
-          <svg width="27" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.569 0l3.046 9.523h9.858l-7.975 5.885 3.046 9.523-7.975-5.885-7.976 5.885 3.047-9.523L.664 9.523h9.858L13.57 0z"
-              fill="#BDBEC2"
-              fill-opacity=".7"
-            />
-          </svg>
-          <input type="radio" name="rating" value="1" />
-          <input type="radio" name="rating" value="2" />
-          <input type="radio" name="rating" value="3" />
-          <input type="radio" name="rating" value="4" />
-          <input type="radio" name="rating" value="5" />
-        </label>
-        <textarea cols="5" required>
-          Комментарий
-        </textarea>
-      </div>
+      <Button className="form__button-submit" onClick={handleSubmit}>
+        оставить отзыв
+      </Button>
     </form>
   );
 };

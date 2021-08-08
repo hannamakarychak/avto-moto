@@ -8,3 +8,26 @@
   right: 0;
   top: 0;
 }
+
+.tabs__button {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  padding: 11px 14px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color-light);
+  color: var(--main-color-dark);
+  width: 19.5rem;
+}
+
+.tabs__button[data-selected] {
+  background-color: var(--bright-accent);
+  color: var(--bg-color-light);
+  border: 1px solid var(--bright-accent);
+}
+
+.tabs__list {
+  background-color: transparent;
+}

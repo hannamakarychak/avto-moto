@@ -1,0 +1,60 @@
+.star-rating {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.star-rating__caption {
+  margin: 0;
+  flex: 1 0 auto;
+  margin-right: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.star-rating__group {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex: 0 1 auto;
+}
+
+.star-rating__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.star-rating__star {
+  padding: 0;
+  height: 27px;
+  width: 29px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(./star-off.svg);
+}
+
+.star-rating__input:checked ~ .star-rating__star,
+.star-rating__input + .star-rating__star:hover ~ .star-rating__star,
+.star-rating__input + .star-rating__star:hover {
+  background-image: url(./star-on.svg);
+}
+
+.star-rating__input:hover ~ .star-rating__star {
+  background-image: url(./star-off.svg);
+}
+
+.star-rating__group:hover > .star-rating__input + .star-rating__star {
+  background-image: url(./star-off.svg);
+}
+
+.star-rating__group:hover > .star-rating__input + .star-rating__star:hover ~ .star-rating__star,
+.star-rating__group:hover > .star-rating__input + .star-rating__star:hover {
+  background-image: url(./star-on.svg);
+}

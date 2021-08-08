@@ -1,0 +1,56 @@
+.form__main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__col {
+  flex: 1 1 auto;
+  max-width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form__input {
+  width: 100%;
+  margin: 16px 0 0;
+  padding: 15px 26px;
+  color: var(--color-dark);
+  background-color: var(--bg-color-light);
+  border: 1px solid rgba(72, 73, 77, 0.2);
+  font-size: 14px;
+  line-height: 18px;
+
+  &::placeholder {
+    color: var(--main-color-dark);
+  }
+
+  &--required {
+    background-image: url("./asterix.svg");
+    background-repeat: no-repeat;
+    background-position: 12px 12px;
+  }
+
+  &--error {
+    border: 1px solid #ff0000;
+    margin-top: 0;
+  }
+}
+
+.form__button-submit {
+  margin: 35px auto 0;
+}
+
+.form__error-message {
+  font-size: 14px;
+  line-height: 19px;
+  color: #ff0000;
+  margin-top: -6px;
+  margin-bottom: 3px;
+}
+
+.form__star-rating {
+  margin-top: 22px;
+}

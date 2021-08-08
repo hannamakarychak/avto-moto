@@ -10,14 +10,22 @@ const Review = ({ name, pros, cons, comment, date }) => {
       <div className="review__item">
         <div className="review__name">{name}</div>
         <div className="review__row">
-          <span className="review__icon">+</span>
-          <div className="review__heading">Достоинства</div>
-          <div className="review__text">{pros}</div>
+          {pros && (
+            <Fragment>
+              <span className="review__icon">+</span>
+              <div className="review__heading">Достоинства</div>
+              <div className="review__text">{pros}</div>
+            </Fragment>
+          )}
         </div>
         <div className="review__row">
-          <span className="review__icon">-</span>
-          <div className="review__heading">Недостатки</div>
-          <div className="review__text">{cons}</div>
+          {cons && (
+            <Fragment>
+              <span className="review__icon">-</span>
+              <div className="review__heading">Недостатки</div>
+              <div className="review__text">{cons}</div>
+            </Fragment>
+          )}
         </div>
         <div className="review__heading review__heading--comment">Комментарий</div>
         <div className="review__text review__text--comment">{comment}</div>
