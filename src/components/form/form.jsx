@@ -94,7 +94,7 @@ const Form = ({ onSubmit }) => {
             <p className="form__error-message">Пожалуйста, заполните поле</p>
           )}
           <textarea
-            className={classNames("form__input form__input--required", {
+            className={classNames("form__input form__input--required form__input--textarea", {
               "form__input--error": hasCommentInputError,
             })}
             rows="5"

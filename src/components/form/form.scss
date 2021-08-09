@@ -27,6 +27,18 @@
     color: var(--main-color-dark);
   }
 
+  &--textarea {
+    resize: none;
+  }
+
+  &:hover {
+    border: 1px solid var(--main-color-dark);
+  }
+
+  &:focus {
+    border: 1px solid var(--main-color-dark);
+  }
+
   &--required {
     background-image: url("./asterix.svg");
     background-repeat: no-repeat;
