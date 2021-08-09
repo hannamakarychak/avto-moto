@@ -2,7 +2,7 @@ import "./table.scss";
 
 const Table = () => {
   return (
-    <table>
+    <table className="table">
       <tbody>
         <tr className="table__row">
           <td>Трансмиссия</td>

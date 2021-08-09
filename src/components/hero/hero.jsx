@@ -28,7 +28,7 @@ const Hero = () => {
         />
 
         <div className="hero__info">
-          <h2 className="hero__heading">Марпех 11</h2>
+          <h1 className="hero__heading">Марпех 11</h1>
           <div className="hero__specs">
             <div className="hero__specs-item">
               <GasIcon className="hero__specs-icon" />
