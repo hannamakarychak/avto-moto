@@ -19,4 +19,12 @@
   line-height: 22px;
   text-decoration: none;
   color: var(--main-color-dark);
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }

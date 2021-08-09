@@ -15,8 +15,24 @@
   background-color: var(--bright-accent);
   border: 1px solid var(--bright-accent);
 
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
   &--ghost {
     background-color: var(--bg-color-light);
     color: var(--bright-accent);
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 }

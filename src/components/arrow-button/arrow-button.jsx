@@ -1,8 +1,22 @@
+import classNames from "classnames";
+import "./arrow-button.scss";
+
 const ArrowButton = ({ onClick, disabled, direction }) => {
   return (
-    <button onClick={onClick} disabled={disabled}>
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={classNames({ "arrow-button": disabled })}
+    >
       <svg width="52" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="26" cy="26" r="25.5" fill="#fff" stroke="#D7D9DF" />
+        <circle
+          cx="26"
+          cy="26"
+          r="25.5"
+          fill="#fff"
+          stroke="#D7D9DF"
+          className={classNames({ "arrow-button__circle": !disabled })}
+        />
         <path
           d={
             direction === "left"
