@@ -19,9 +19,12 @@ const Gallery = ({ images, thumbnails, className = "", promoLabel }) => {
     <div className={classNames("gallery", className)}>
       <span className="gallery__promo">{promoLabel}</span>
       <img
+        srcSet={`${images[currentImage].src}@2x.jpg 2x`}
         className="gallery__main-image"
         alt={images[currentImage].alt}
-        src={images[currentImage].src}
+        src={`${images[currentImage].src}.jpg`}
+        width={600}
+        height={375}
       />
       <div className="gallery__thumbnails">
         <ArrowButton
@@ -31,7 +34,13 @@ const Gallery = ({ images, thumbnails, className = "", promoLabel }) => {
           direction="left"
         />
         {thumbnails.map((el) => (
-          <img key={el} className="gallery__thumbnail" alt={images[currentImage].alt} src={el} />
+          <img
+            key={el}
+            className="gallery__thumbnail"
+            alt={images[currentImage].alt}
+            src={`${el}.jpg`}
+            srcSet={`${el}@2x.jpg 2x`}
+          />
         ))}
         <ArrowButton
           onClick={setNextImage}

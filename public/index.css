@@ -64,3 +64,8 @@ button {
   color: inherit;
   font: inherit;
 }
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}

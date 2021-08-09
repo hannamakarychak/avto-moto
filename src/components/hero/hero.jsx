@@ -15,15 +15,11 @@ const Hero = () => {
         <Gallery
           className="hero__gallery"
           images={[
-            { src: "img/car1.png", alt: "Морпех 11 экстерьер" },
-            { src: "img/car-thumbnail2.png", alt: "Морпех 11 салон" },
-            { src: "img/car-thumbnail3.png", alt: "Морпех 11 приборы" },
+            { src: "img/car1", alt: "Морпех 11 экстерьер" },
+            { src: "img/car-thumbnail2", alt: "Морпех 11 салон" },
+            { src: "img/car-thumbnail3", alt: "Морпех 11 приборы" },
           ]}
-          thumbnails={[
-            "img/car-thumbnail1.png",
-            "img/car-thumbnail2.png",
-            "img/car-thumbnail3.png",
-          ]}
+          thumbnails={["img/car-thumbnail1", "img/car-thumbnail2", "img/car-thumbnail3"]}
           promoLabel="new model"
         />
 

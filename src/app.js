@@ -8,8 +8,10 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <Hero />
-      <Details />
+      <main>
+        <Hero />
+        <Details />
+      </main>
       <Footer />
     </Fragment>
   );
