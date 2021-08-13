@@ -1,12 +1,13 @@
 import classNames from "classnames";
 import "./arrow-button.scss";
 
-const ArrowButton = ({ onClick, disabled, direction }) => {
+const ArrowButton = ({ onClick, disabled, direction, label }) => {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
       className={classNames({ "arrow-button": disabled })}
+      aria-label={label}
     >
       <svg width="52" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle

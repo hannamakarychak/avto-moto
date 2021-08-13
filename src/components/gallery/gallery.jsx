@@ -32,6 +32,7 @@ const Gallery = ({ images, thumbnails, className = "", promoLabel }) => {
           currentImage={currentImage}
           disabled={currentImage === 0}
           direction="left"
+          label="Previous image"
         />
         {thumbnails.map((el) => (
           <img
@@ -47,6 +48,7 @@ const Gallery = ({ images, thumbnails, className = "", promoLabel }) => {
           currentImage={currentImage}
           disabled={currentImage === images.length - 1}
           direction="right"
+          label="Next image"
         />
       </div>
     </div>
