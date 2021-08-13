@@ -26,12 +26,13 @@
 
 .review__heading,
 .review__text {
+  font-size: 15px;
   margin-left: 20px;
+  line-height: 20px;
 }
 
 .review__heading {
   font-weight: 600;
-  font-size: 15px;
   line-height: 20px;
   margin-bottom: 4px;
   color: var(--color-dark);
@@ -43,7 +44,7 @@
 }
 
 .review__text {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 
   &--comment {
     margin-left: 0;
@@ -55,7 +56,7 @@
   font-size: 15px;
   line-height: 20px;
   margin-bottom: 30px;
-  margin-left: 20px;
+  margin-left: 38px;
   color: var(--bright-accent);
 }
 

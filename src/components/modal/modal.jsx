@@ -5,7 +5,7 @@ import Form from "../form/form";
 
 import "./modal.scss";
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose, onSubmit }) => {
   return (
     <div>
       <DialogOverlay isOpen={isOpen} onDismiss={onClose} className="modal-overlay">
@@ -20,7 +20,7 @@ const Modal = ({ isOpen, onClose }) => {
             </svg>
           </button>
           <h3 className="modal__title">Оставить отзыв </h3>
-          <Form onSubmit={onClose} />
+          <Form onSubmit={onSubmit} />
         </DialogContent>
       </DialogOverlay>
     </div>

@@ -1,6 +1,8 @@
-const Logo = () => {
+import classNames from "classnames";
+
+const Logo = ({ className }) => {
   return (
-    <div className="logo" href="/">
+    <div className={classNames("logo", className)} href="/">
       <svg
         width="130"
         height="55"

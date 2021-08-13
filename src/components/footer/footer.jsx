@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        <nav>
+        <nav className="footer__navigation">
           <ul className="footer__list">
             <li className="footer__item">
               <a href="/" className="footer__link">
