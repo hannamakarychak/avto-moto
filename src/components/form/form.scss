@@ -29,6 +29,7 @@
 
   &--textarea {
     resize: none;
+    height: 118px;
   }
 
   &:hover {
@@ -52,7 +53,7 @@
 }
 
 .form__button-submit {
-  margin: 35px auto 0;
+  margin: 35px auto 15px;
   cursor: pointer;
 }
 
