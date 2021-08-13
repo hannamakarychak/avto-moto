@@ -18,13 +18,13 @@ const Details = () => {
           </TabList>
 
           <TabPanels>
-            <TabPanel>
+            <TabPanel tabIndex="-1">
               <Description />
             </TabPanel>
-            <TabPanel>
+            <TabPanel tabIndex="-1">
               <ReviewsList />
             </TabPanel>
-            <TabPanel>
+            <TabPanel tabIndex="-1">
               <Contacts />
             </TabPanel>
           </TabPanels>
