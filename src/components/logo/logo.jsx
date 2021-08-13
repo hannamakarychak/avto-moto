@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-    <a className="logo" href="/">
+    <div className="logo" href="/">
       <svg
         width="130"
         height="55"
@@ -145,7 +145,7 @@ const Logo = () => {
           fill="black"
         />
       </svg>
-    </a>
+    </div>
   );
 };
 

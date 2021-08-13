@@ -9,7 +9,7 @@ const Modal = ({ isOpen, onClose }) => {
   return (
     <div>
       <DialogOverlay isOpen={isOpen} onDismiss={onClose} className="modal-overlay">
-        <DialogContent aria-label="Review Form" className="modal">
+        <DialogContent aria-label="Review Form" className="modal" autoFocus={false}>
           <button className="modal__close-button" onClick={onClose}>
             <VisuallyHidden>Close</VisuallyHidden>
             <svg width="15" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">

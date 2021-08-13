@@ -69,6 +69,7 @@ const Form = ({ onSubmit }) => {
             placeholder="Имя"
             required
             value={nameInput}
+            autoFocus={true}
             onChange={handleNameInputChange}
           />
           <input

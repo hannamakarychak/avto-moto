@@ -31,15 +31,15 @@ const Hero = () => {
               <div className="hero__specs-text">бензин</div>
             </div>
             <div className="hero__specs-item">
-              <TransmitionIcon />
+              <TransmitionIcon className="hero__specs-icon" />
               <div className="hero__specs-text">механика</div>
             </div>
             <div className="hero__specs-item">
-              <HorseIcon />
+              <HorseIcon className="hero__specs-icon" />
               <div className="hero__specs-text">100 л.с.</div>
             </div>
             <div className="hero__specs-item">
-              <VolumeIcon />
+              <VolumeIcon className="hero__specs-icon" />
               <div className="hero__specs-text">1.4 л</div>
             </div>
           </div>

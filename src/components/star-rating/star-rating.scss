@@ -38,6 +38,10 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url(./star-off.svg);
+
+  &:focus {
+    outline: red;
+  }
 }
 
 .star-rating__input:checked ~ .star-rating__star,

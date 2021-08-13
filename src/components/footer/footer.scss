@@ -8,10 +8,15 @@
 
 .footer__list {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .footer__link {

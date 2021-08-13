@@ -1,6 +1,12 @@
-const TransmitionIcon = () => {
+const TransmitionIcon = ({ className }) => {
   return (
-    <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="40"
+      height="40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
       <g opacity=".5" stroke="#48494D" strokeWidth="1.5">
         <path d="M11.194 20h17.612" />
         <path
