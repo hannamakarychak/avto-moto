@@ -1,22 +1,27 @@
 .footer {
-  padding: 30px 0;
+  padding: 20px 0;
   background-color: var(--bg-color-accent);
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
+.footer__navigation {
+  margin-right: -31px;
+  margin-left: -31px;
+}
+
 .footer__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.footer__item:not(:last-child) {
-  margin-right: 10px;
+.footer__item {
+  padding: 10px 31px;
 }
 
 .footer__link {

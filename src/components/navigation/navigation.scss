@@ -2,12 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 }
 
-.navigation__item:not(:last-child) {
-  margin-right: 68px;
+.navigation__item {
+  margin-left: 68px;
 }
 
 .navigation__link {
